@@ -1,0 +1,17 @@
+<!--pages/register/register.wxml-->
+
+<view class="register_container">
+  <text class="register_title">加入玩安卓！</text>
+  <text class="register_subtitle">加入玩安卓，阅读海量优质安卓文章。</text>
+
+  <input class="register_user_input" type="text" placeholder="请输入用户名" bindinput="getUserName"/>
+  <input class="register_password_input" type="password" placeholder="请输入密码" bindinput="getUserPwd"/>
+    <input class="register_password_input" type="password" placeholder="请确认密码" bindinput="getUserPwd"/>
+
+  <view class="register_login_container" bindtap="userLogin">
+    <text class="register_login_text" >登录</text>
+  </view>
+  <text class="register_login_register">还没有账号？点我注册</text>
+
+
+</view>

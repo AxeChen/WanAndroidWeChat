@@ -1,0 +1,61 @@
+/* pages/login/login.wxss */
+.login_container{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.login_title{
+  margin-left: 30rpx;
+  font-size: 80rpx;
+  color: #00BFFF;
+}
+
+.login_subtitle{
+  margin-top: 20rpx;
+   margin-left: 30rpx;
+   font-size: 30rpx;
+}
+
+.login_user_input{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 100rpx;
+  border-bottom: 2rpx solid #00BFFF;
+  padding: 15rpx;
+  font-size: 30rpx;
+}
+
+.login_password_input{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+  border-bottom: 2rpx solid #00BFFF;
+  padding: 15rpx;
+  font-size: 30rpx;
+}
+
+.login_login_container{
+  height: 80rpx;
+  margin-top: 50rpx;
+   margin-left: 30rpx;
+  margin-right: 30rpx;
+  border-radius: 10rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #00BFFF;
+}
+
+.login_login_text{
+  color: #ffffff;
+  width: 100%;
+  font-size: 40rpx;
+}
+
+.login_login_register{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  color: #00BFFF;
+}

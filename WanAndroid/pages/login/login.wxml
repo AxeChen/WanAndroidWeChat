@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<view class="login_container">
+  <text class="login_title">欢迎回来！</text>
+  <text class="login_subtitle">登录到玩安卓，阅读优质安卓文章！</text>
+
+  <input class="login_user_input" type="text" placeholder="请输入用户名" bindinput="getUserName"/>
+  <input class="login_password_input" type="password" placeholder="请输入密码" bindinput="getUserPwd"/>
+
+  <view class="login_login_container" bindtap="userLogin">
+    <text class="login_login_text" >登录</text>
+  </view>
+  <text class="login_login_register">还没有账号？点我注册</text>
+
+
+</view>
