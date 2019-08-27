@@ -1,0 +1,4 @@
+/* pages/main/mine/mine.wxss */
+.mine_container{
+  display: flex;
+}

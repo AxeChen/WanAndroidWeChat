@@ -19,25 +19,19 @@
   height: 40rpx;
 }
 
-.article_search {
-  display: flex;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  flex-direction: row;
-  align-items: center;
-  height: 90rpx;
-}
+
 
 .search_input {
   font-size: 28rpx;
   margin-left: 20rpx;
-  width: 100%;
-  margin-right: 16rpx;
+  width: 100%
 }
 
 .search_clear {
   height: 40rpx;
+  margin-right: 40rpx;
   width: 42rpx;
+  align-self: right;
 }
 
 .article_lists {
@@ -137,4 +131,21 @@
   border-radius: 4rpx;
   font-size: 24rpx;
   color: green;
+}
+
+.scroll_view{
+  padding-top: 90dp;
+}
+
+.article_search {
+  display: flex;
+  padding-left: 20rpx;
+  padding-right: 40rpx;
+  flex-direction: row;
+  align-items: center;
+  height: 90rpx;
+  position: fixed;
+  width: 100%;
+  background:white;
+  z-index: 1;
 }

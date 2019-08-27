@@ -31,17 +31,22 @@ Page({
         articleListBean: res,
         artcies: res.datas
       })
-      console.log(page.data.articleListBean.datas)
-
     }).catch(function(error){
       console.log(error)
     })
   },
   itemClick:function(e){
-    console.log(e.currentTarget.dataset.s.link)
     wx.navigateTo({
-      url: '../../../pages/web/webview?articleBean=' + e.currentTarget.dataset.s,
+      url: '../../../pages/web/webview?link=' + e.currentTarget.dataset.s + "&title=" + e.currentTarget.dataset.a
     })
+  },
+  swiperItemClick:function(e){
+    wx.navigateTo({
+      url: '../../../pages/web/webview?link=' + e.currentTarget.dataset.s + "&title=" + e.currentTarget.dataset.a
+    })
+  },
+  clearClick:function(e){
+    
   },
   /**
    * 生命周期函数--监听页面加载

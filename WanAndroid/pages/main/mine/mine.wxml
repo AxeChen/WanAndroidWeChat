@@ -1,0 +1,9 @@
+<!--pages/main/mine/mine.wxml-->
+<view class="mine_container">
+  <cover-view>
+     <cover-image src="../../../images/test_diag_two.png">
+       <text>asdfasdfsaf</text>
+     </cover-image>
+  </cover-view>
+
+</view>
