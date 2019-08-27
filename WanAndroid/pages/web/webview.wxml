@@ -1,0 +1,6 @@
+<!--pages/web/webview.wxml-->
+<view>
+  <web-view src="{{articleBean.link}}">
+  </web-view>
+
+</view>

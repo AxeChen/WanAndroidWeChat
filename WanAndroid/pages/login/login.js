@@ -1,6 +1,6 @@
 // pages/login/login.js
 
-// var loginApi = require("../../network/request.js")
+var loginApi = require("../../common/network/request.js")
 
 Page({
 
@@ -24,7 +24,11 @@ Page({
   },
   userLogin: function(e) {
     console.log("用户名：" + this.data.username + "   密码：" + this.data.userpwd)
-    loginApi
+    loginApi.userLogin(this.data.username,this.data.userpwd).then(function(result){
+      console.log(result)
+    }).catch(function(error){
+
+    })
   },
   /**
    * 生命周期函数--监听页面加载
