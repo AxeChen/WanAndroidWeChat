@@ -1,2 +1,50 @@
 <!--pages/main/wechat/wechat.wxml-->
-<text>pages/main/wechat/wechat.wxml</text>
+<view class="wechat_container">
+  <!-- 滑动导航部分 -->
+  <scroll-view class="wechat_tab_layout" scroll-x>
+    <view class="wechat_item_container">
+      <block wx:for="{{wechatItem}}">
+        <view class="wechat_item" data-a="{{item.id}}" bindtap="nameClick">
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+  <scroll-view>
+    <view>
+      <!-- 文章展示部分 -->
+      <block wx:for="{{artcies}}" wx:key="articleItem">
+        <view class="article_lists" bindtap="itemClick" data-s="{{item.link}}" data-a="{{item.title}}">
+
+          <view class="article_lists_head">
+            <view class="article_lists_user_info">
+              <image class="article_avatar_img" src="../../../images/ic_default_avatar.png"></image>
+              <text class="article_author">{{item.author}}</text>
+            </view>
+            <view class="article_type">
+              <text class="article_type_news" style="{{item.fresh?'display:block':'display:none'}}">最新</text>
+              <text class="article_project" style="display:none">项目</text>
+              <text class="article_top" style="display:none">置顶</text>
+            </view>
+          </view>
+
+          <view class="article_title_contain">
+            <text class="article_title">{{item.title}}</text>
+          </view>
+
+
+          <view class="article_bottom">
+            <view class="article_tags_container">
+              <text class="article_tags">分类：{{item.chapterName}}/{{item.superChapterName}}</text>
+            </view>
+            <text class="article_time">时间：{{item.niceDate}}</text>
+          </view>
+
+        </view>
+
+      </block>
+    </view>
+  </scroll-view>
+
+</view>

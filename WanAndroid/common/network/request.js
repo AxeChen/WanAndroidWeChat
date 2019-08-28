@@ -34,26 +34,26 @@ function get(url) {
   console.log("--------------------------------")
 
   return new Promise((resolve, reject) => {
-      wx.request({
-          url: url,
-          method: 'GET',
-          success: function(res) {
-            if (res.statusCode == 200) {
-              if (res.data.errorCode == 0) {
-                console.log(res.data.data)
-                resolve(res.data.data)
-                
-              } else {
-                reject("error")
-              }
-            } else {
-              reject("error")
-            }
-        },
-        fail: function(error) {
-          reject(error)
+    wx.request({
+      url: url,
+      method: 'GET',
+      success: function(res) {
+        if (res.statusCode == 200) {
+          if (res.data.errorCode == 0) {
+            console.log(res.data.data)
+            resolve(res.data.data)
+
+          } else {
+            reject("error")
+          }
+        } else {
+          reject("error")
         }
-      })
+      },
+      fail: function(error) {
+        reject(error)
+      }
+    })
   })
 }
 
@@ -110,7 +110,34 @@ function getArtciles(pageIndex) {
   })
 }
 
+/**
+ * 获取公众号列表
+ */
+function getWeChatItems() {
+  return new Promise((resolve, reject) => {
+    get(HOST + "/wxarticle/chapters/json").then(function(result) {
+      resolve(result)
+    }).catch(function(error) {
+      reject(error)
+    })
+  })
+}
+
+/**
+ * 获取公众号文章列表信息
+ */
+function getWetChatArticles(id, pageIndex) {
+  return new Promise((resolve, reject) => {
+    get(HOST + "/wxarticle/list/" + id + "/" + pageIndex + "/json").then(function(result) {
+      resolve(result)
+    }).catch(function(error) {
+      reject(error)
+    })
+  })
+}
 
 module.exports.userLogin = userLogin;
 module.exports.getBanner = getBanner;
 module.exports.getArtciles = getArtciles;
+module.exports.getWeChatItems = getWeChatItems;
+module.exports.getWetChatArticles = getWetChatArticles;
