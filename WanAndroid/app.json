@@ -10,7 +10,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/main/project/project",
-    "pages/main/tree/tree"
+    "pages/main/tree/tree",
+    "pages/main/allwechat/allwechat",
+    "pages/main/wechatarticles/wechatarticles"
   ],
   "window": {
     "backgroundTextStyle": "light",

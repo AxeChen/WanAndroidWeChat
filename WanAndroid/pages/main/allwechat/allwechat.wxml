@@ -1,0 +1,16 @@
+<!--pages/main/allwechat/allwechat.wxml-->
+<view>
+  <view class="wechat_head">
+
+    
+    <image class="wechat_head_icon" src="../../../images/wechat_detail.png" />
+    <text class="wechat_head_text">优秀的安卓开发微信公众号</text>
+  </view>
+
+  <block wx:for="{{wechats}}" wx:key="key">
+    <view class="wechat_item" bindtap="itemClick" data-a="{{item.id}}">
+      <text class="wechat_name">{{item.name}}</text>
+    </view>
+  </block>
+
+</view>

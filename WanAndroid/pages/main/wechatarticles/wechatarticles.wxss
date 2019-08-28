@@ -1,74 +1,4 @@
-/* pages/main/wechat/wechat.wxss */
-
-.wechat_container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.wechat_nav {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: white;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.wechat_tab_layout {
-  display: flex;
-  flex-direction: row;
-}
-
-.wechat_nav {
-  display: flex;
-  flex-direction: row;
-  border-bottom: 2rpx solid #e6e6e6;
-}
-
-.wechat_item_container {
-  display: flex;
-  flex-direction: row;
-}
-
-.wechat_all {
-  width: 70rpx;
-  align-self: center;
-  height: 70rpx;
-  border-left: 2rpx solid #e6e6e6;
-  background: white;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.wechat_all_text{
-  font-size: 20rpx;
-    margin-left: 15rpx;
-    color: #00bfff;
-}
-
-.wechat_all_image {
-  width: 50rpx;
-  height: 50rpx;
-  margin-left: 15rpx;
-}
-
-.wechat_item {
-  height: 50rpx;
-  margin: 20rpx;
-  white-space: nowrap;
-}
-
-.wechat_item_selected {
-  height: 50rpx;
-  margin: 20rpx;
-  white-space: nowrap;
-  border-bottom: 4rpx solid #00bfff;
-}
-
+/* pages/main/wechatarticles/wechatarticles.wxss */
 .article_lists {
   padding: 20rpx 20rpx 20rpx 20rpx;
   flex-direction: column;
@@ -171,6 +101,4 @@
   color: green;
 }
 
-.article_list {
-  margin-top: 100rpx;
-}
+

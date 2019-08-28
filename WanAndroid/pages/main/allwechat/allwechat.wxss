@@ -1,0 +1,32 @@
+/* pages/main/allwechat/allwechat.wxss */
+
+.wechat_head {
+  height: 200rpx;
+  background: #00bfff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wechat_head_icon{
+  width: 100rpx;
+  height: 100rpx;
+  align-self: center;
+}
+
+.wechat_head_text{
+  font-size: 40rpx;
+  color:white;
+    align-self: center;
+}
+
+.wechat_item {
+  height: 100rpx;
+  display: flex;
+}
+
+.wechat_name {
+  align-self: center;
+  margin-left: 20rpx;
+}

@@ -1,66 +1,33 @@
-// pages/main/wechat/wechat.js
+// pages/main/allwechat/allwechat.js
 var WaApi = require("../../../common/network/request.js")
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    wechatItem: [],
-    selectId:0,
-    artcies:[],
-    scrollWidth:0
+    wechats: []
   },
-  getWeChatItems: function(e) {
+  getWeChatList: function(e) {
     var page = this
     WaApi.getWeChatItems().then(function(result) {
       page.setData({
-        wechatItem: result,
-        selectId: result[0].id
+        wechats: result
       })
-      page.getWetChatArticles()
     }).catch(function(error) {
 
     })
-    
   },
-  nameClick: function(e) {
-    this.setData({
-      selectId:e.currentTarget.dataset.a
-    })
-    
-    this.getWetChatArticles()
-  },
-  itemClick:function(e){
+  itemClick: function(e) {
     wx.navigateTo({
-      url: '../../../pages/web/webview?link=' + e.currentTarget.dataset.s + "&title=" + e.currentTarget.dataset.a
-    })
-  },
-  getWetChatArticles: function(e) {
-    var page = this
-    WaApi.getWetChatArticles(this.data.selectId, 1).then(function(result){
-      page.setData({
-        artcies:result.datas
-      })
-    }).catch(function(error){
-
-    })
-  },
-  clickToAllWeChat:function(e){
-    wx.navigateTo({
-      url: '../../../pages/main/allwechat/allwechat',
+      url: '../../../pages/main/wechatarticles/wechatarticles?selectId=' + e.currentTarget.dataset.a
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.getWeChatItems()
-    var w = wx.getSystemInfoSync().windowWidth-50
-    this.setData({
-      scrollWidth:w
-    })
+    this.getWeChatList()
   },
 
   /**

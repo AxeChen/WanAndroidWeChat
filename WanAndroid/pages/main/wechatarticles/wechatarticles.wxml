@@ -1,34 +1,9 @@
-<!--pages/main/wechat/wechat.wxml-->
-<view class="wechat_container">
-  <!-- 滑动导航部分 -->
-  <view>
-
-
-    <view class="wechat_nav">
-
-      <scroll-view class="wechat_tab_layout" scroll-x style="width:{{scrollWidth}}px">
-        <view class="wechat_item_container">
-          <block wx:for="{{wechatItem}}">
-            <view class="{{selectId==item.id?'wechat_item_selected':'wechat_item'}}" data-a="{{item.id}}" bindtap="nameClick">
-              <text>{{item.name}}</text>
-            </view>
-          </block>
-        </view>
-      </scroll-view>
-
-
-      <view class="wechat_all" bindtap="clickToAllWeChat">
-        <image src="../../../images/wechat_selected.png" class="wechat_all_image"/>
-        <text class="wechat_all_text">所有</text>
-      </view>
-    </view>
-
-  </view>
-
-  <scroll-view>
+<!--pages/main/wechatarticles/wechatarticles.wxml-->
+<view>
+ <scroll-view>
     <view class="article_list">
       <!-- 文章展示部分 -->
-      <block wx:for="{{artcies}}" wx:key="articleItem">
+      <block wx:for="{{articles}}" wx:key="articleItem">
         <view class="article_lists" bindtap="itemClick" data-s="{{item.link}}" data-a="{{item.title}}">
 
           <view class="article_lists_head">
@@ -60,5 +35,6 @@
       </block>
     </view>
   </scroll-view>
+
 
 </view>
