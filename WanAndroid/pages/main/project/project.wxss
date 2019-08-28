@@ -1,1 +1,64 @@
-/* pages/main/project/project.wxss */
+/* pages/fristPage/frist.wxss */
+.main {
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+    padding:15rpx;
+}
+
+.newsList {
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 15rpx;
+    overflow: hidden;
+}
+.box{
+    height: 250rpx;
+    overflow: hidden;
+    position: relative;
+}
+.titleimg{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.liner{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 125rpx;
+    width: 100%;
+}
+.pos{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.24) , rgba(0, 0, 0, 0));
+}
+
+.icon{
+    top: 20rpx;
+    left: 20rpx;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+.icon_img{
+    width: auto;
+    margin-right: 20rpx;
+}
+.icon_img_img{
+    width:60rpx;
+    height: 60rpx;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.icon_text{
+    color: #fff;
+    font-size: 20rpx;
+}
+.title{
+    padding: 20rpx;
+    color: #515151;
+    font-size: 30rpx;
+}

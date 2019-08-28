@@ -1,2 +1,21 @@
-<!--pages/main/project/project.wxml-->
-<text>pages/main/project/project.wxml</text>
+<view class="main" bindscrolltoupper="getTest" style="height: auto;" scroll-y="{{true}}">
+  <view class="newsList" wx:for="{{newlist}}" wx:key="{{item.id}}" hover-class="none" hover-stop-propagation="false">
+    <view class="box">
+      <image src="{{item.envelopePic}}" lazy-load="true" mode="center" class="titleimg"></image>
+      <view class="liner">
+        <view class="pos">
+          <view class="icon">
+            <view class="icon_img">
+              <image class="icon_img_img" src="../../../images/22.png" mode="center|widthFix" lazy-load="false" binderror="" bindload="" />
+            </view>
+            <text class="icon_text">{{item.chapterName}}</text>
+          </view>
+          <view class="like"></view>
+        </view>
+      </view>
+    </view>
+    <view class="title">
+      <text decode="{{true}}">{{item.title}}</text>
+    </view>
+  </view>
+</view>
