@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/main/tree/tree",
     "pages/main/wechat/wechat",
     "pages/main/article/article",
     "pages/main/mine/mine",
@@ -10,9 +11,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/main/project/project",
-    "pages/main/tree/tree",
     "pages/main/allwechat/allwechat",
-    "pages/main/wechatarticles/wechatarticles"
+    "pages/main/wechatarticles/wechatarticles",
+    "pages/main/treedetails/treedetails"
   ],
   "window": {
     "backgroundTextStyle": "light",

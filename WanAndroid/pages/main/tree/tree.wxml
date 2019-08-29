@@ -1,2 +1,19 @@
 <!--pages/main/tree/tree.wxml-->
-<text>pages/main/tree/tree.wxml</text>
+<view class="tree_container">
+
+  <block wx:for="{{articleTrees}}" wx:key="key">
+    <view class="tree_item">
+      <view class="tree_head">
+        <text class="tree_title">{{item.name}}</text>
+        <text class="tree_kinds" bindtap="clickKinds" data-a="{{item.id}}">{{item.children.length}}个分类</text>
+        <image class="tree_arrow" bindtap="clickKinds" src="../../../images/expand-more.png" data-a="{{item.id}}"></image>
+      </view>
+      <view class="tree_children" style="{{selectId==item.id?'display:block;':'display:none;'}}">
+        <block wx:for="{{item.children}}" wx:key="key">
+          <text class="item">{{item.name}}</text>
+        </block>
+      </view>
+    </view>
+
+  </block>
+</view>

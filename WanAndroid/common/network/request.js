@@ -136,8 +136,22 @@ function getWetChatArticles(id, pageIndex) {
   })
 }
 
+/**
+ * 获取文章体系
+ */
+function getArticlesTree() {
+  return new Promise((resolve, reject) => {
+    get(HOST + "/tree/json").then(function(result) {
+        resolve(result)
+    }).catch(function(error) {
+        reject(error)
+    })
+  })
+}
+
 module.exports.userLogin = userLogin;
 module.exports.getBanner = getBanner;
 module.exports.getArtciles = getArtciles;
 module.exports.getWeChatItems = getWeChatItems;
 module.exports.getWetChatArticles = getWetChatArticles;
+module.exports.getArticlesTree = getArticlesTree;
