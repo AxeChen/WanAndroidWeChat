@@ -3,7 +3,7 @@
 
   <view class="mine_header">
     <image class="mine_avatar" src="../../../images/ic_default_avatar.png"></image>
-    <text class="mine_name">AxeChen</text>
+    <text class="mine_name">未登录</text>
   </view>
 
   <view class="mine_item">
@@ -11,25 +11,24 @@
     <text class="mine_item_name">我的收藏</text>
   </view>
   <view class="mine_item">
-    <image class="mine_collect_img" src="../../../images/ic_collect.png"></image>
+    <image class="mine_collect_img" src="../../../images/ic_blog.png"></image>
     <text class="mine_item_name">博客地址</text>
   </view>
 
-
   <view class="mine_item">
-    <image class="mine_collect_img" src="../../../images/ic_collect.png"></image>
+    <image class="mine_collect_img" src="../../../images/ic_member.png"></image>
     <text class="mine_item_name">开发人员介绍</text>
   </view>
   <view class="mine_item">
-    <image class="mine_collect_img" src="../../../images/ic_collect.png"></image>
+    <image class="mine_collect_img" src="../../../images/ic_github.png"></image>
     <text class="mine_item_name">源码地址</text>
   </view>
   <view class="mine_item">
-    <image class="mine_collect_img" src="../../../images/ic_collect.png"></image>
+    <image class="mine_collect_img" src="../../../images/ic_android.png"></image>
     <text class="mine_item_name">WanAndroid项目介绍</text>
   </view>
   <view class="mine_item">
-    <image class="mine_collect_img" src="../../../images/ic_collect.png"></image>
-    <text class="mine_item_name">其他版本下载地址</text>
+    <image class="mine_collect_img" src="../../../images/ic_download.png"></image>
+    <text class="mine_item_name">Kotlin版本下载地址</text>
   </view>
 </view>

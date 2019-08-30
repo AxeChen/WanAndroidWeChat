@@ -1,0 +1,24 @@
+/* pages/main/mine/developer/developer.wxss */
+
+.developer_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.developer_item {
+  display: flex;
+  padding: 20rpx;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.developer_name{
+align-self: center;
+}
+
+.developer_avatar{
+  height: 200rpx;
+  width: 200rpx;
+  align-self: center;
+}

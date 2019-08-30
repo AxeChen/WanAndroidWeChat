@@ -36,7 +36,13 @@
   align-items: center;
   padding-left: 20rpx;
   padding-right: 20rpx;
+  background: white;
 }
+
+.mine_item:active {
+  background: #e6e6e6;
+}
+
 .mine_item_name{
   margin-left: 20rpx;
 }
