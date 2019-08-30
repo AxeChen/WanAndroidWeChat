@@ -1,4 +1,47 @@
 /* pages/main/mine/mine.wxss */
-.mine_container{
+
+.mine_container {
   display: flex;
+  flex-direction: column;
+}
+
+.mine_header {
+  display: flex;
+  background-image: "../../../images/test_diag_two.png";
+  height: 220rpx;
+  width: 100%;
+  background-color: #00bfff;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mine_avatar {
+  height: 100rpx;
+  width: 100rpx;
+  align-self: center;
+}
+
+.mine_name {
+  margin-top: 20rpx;
+  align-self: center;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+}
+
+.mine_item {
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.mine_item_name{
+  margin-left: 20rpx;
+}
+.mine_collect_img {
+  width: 50rpx;
+  height: 50rpx;
+  align-items: center;
 }

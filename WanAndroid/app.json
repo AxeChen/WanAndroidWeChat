@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/main/mine/mine",
     "pages/main/tree/tree",
     "pages/main/wechat/wechat",
     "pages/main/article/article",
-    "pages/main/mine/mine",
     "pages/web/webview",
     "pages/main/main",
     "pages/login/login",

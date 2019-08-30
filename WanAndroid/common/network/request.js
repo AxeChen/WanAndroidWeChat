@@ -142,9 +142,22 @@ function getWetChatArticles(id, pageIndex) {
 function getArticlesTree() {
   return new Promise((resolve, reject) => {
     get(HOST + "/tree/json").then(function(result) {
-        resolve(result)
+      resolve(result)
     }).catch(function(error) {
-        reject(error)
+      reject(error)
+    })
+  })
+}
+
+/**
+ * 获取知识体系下的文章
+ */
+function getTreeArticles(pageIndex, cid) {
+  return new Promise((resolve, reject) => {
+    get(HOST + "/article/list/" + pageIndex + "/json?cid=" + cid).then(function(result) {
+      resolve(result)
+    }).catch(function(e) {
+      reject(error)
     })
   })
 }
@@ -155,3 +168,4 @@ module.exports.getArtciles = getArtciles;
 module.exports.getWeChatItems = getWeChatItems;
 module.exports.getWetChatArticles = getWetChatArticles;
 module.exports.getArticlesTree = getArticlesTree;
+module.exports.getTreeArticles = getTreeArticles;

@@ -24,11 +24,6 @@ Page({
   },
 
   clickKinds: function(e) {
-    if (this.data.selectIds){
-      
-    }
-
-
     if (e.currentTarget.dataset.a==this.data.selectId){
       this.setData({
         selectId: 0
@@ -38,7 +33,11 @@ Page({
         selectId: e.currentTarget.dataset.a
       })
     }
-    
+  },
+  itemClick:function(e){
+    wx.navigateTo({
+      url: '../../../pages/main/treedetails/treedetails?cid='+e.currentTarget.dataset.c,
+    })
   },
   /**
    * 生命周期函数--监听页面加载
