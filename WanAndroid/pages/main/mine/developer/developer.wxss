@@ -1,5 +1,21 @@
 /* pages/main/mine/developer/developer.wxss */
 
+
+.img_box {
+  margin: 0 auto;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+
+.developer_avatar {
+  height: 200rpx;
+  width: 200rpx;
+  align-self: center;
+  display: block;
+}
+
 .developer_container {
   display: flex;
   flex-direction: column;
@@ -13,12 +29,20 @@
   justify-content: center;
 }
 
-.developer_name{
-align-self: center;
-}
-
-.developer_avatar{
-  height: 200rpx;
-  width: 200rpx;
+.developer_name {
   align-self: center;
+  padding: 30rpx;
+  font-size: 40rpx;
+  color: #666;
+}
+.dev_title{
+  font-size: 35rpx;
+  color: #515151;
+  font-weight: 500;
+}
+.dev_content{
+  font-size: 28rpx;
+  color: #666666;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 20rpx 100rpx;
 }

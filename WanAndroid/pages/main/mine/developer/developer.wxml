@@ -1,15 +1,21 @@
-<!--pages/main/mine/developer/developer.wxml-->
+<!-- pages/main/mine/developer/developer.wxml -->
 <view class="developer_container">
-
   <view class="developer_item">
-    <image class="developer_avatar" src="../../../../images/ic_axechen.jpg"></image>
+    <view class="img_box" hover-class="none" hover-stop-propagation="false">
+      <image class="developer_avatar" src="../../../../images/ic_axechen.jpg"></image>
+    </view>
     <text class="developer_name">AxeChen</text>
-    <text>个人简介：位于长沙，安卓开发，经验丰富，代码风骚。</text>
-    <text>github地址：https://github.com/AxeChen</text>
-    <text>简书地址：https://www.jianshu.com/u/05f7d21f41ed</text>
-    <text>博客地址：http://www.axechen.com</text>
+    <text class="dev_title">个人简介：</text>
+    <text class="dev_content">位于长沙，安卓开发，经验丰富，代码风骚。</text>
+    <text class="dev_title">github地址：</text>
+    <text class="dev_content">
+      <navigator>https://github.com/AxeChen</navigator>
+    </text>
+    <text class="dev_title">简书地址：</text>
+    <text class="dev_content">https://www.jianshu.com/u/05f7d21f41ed</text>
+    <text class="dev_title">博客地址：</text>
+    <text class="dev_content">http://www.axechen.com</text>
   </view>
-
   <view class="developer_item">
     <image class="developer_avatar" src="../../../../images/ic_xiaomi.jpg"></image>
     <text class="developer_name">小米</text>
@@ -18,5 +24,4 @@
     <text>简书地址：https://www.jianshu.com/u/05f7d21f41ed</text>
     <text>博客地址：http://www.axechen.com</text>
   </view>
-
 </view>
