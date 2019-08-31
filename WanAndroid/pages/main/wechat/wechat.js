@@ -10,7 +10,9 @@ Page({
     wechatItem: [],
     selectId:0,
     artcies:[],
-    scrollWidth:0
+    scrollWidth:0,
+    loadComplete:false,
+    pageIndex:0
   },
   getWeChatItems: function(e) {
     var page = this
@@ -27,9 +29,12 @@ Page({
   },
   nameClick: function(e) {
     this.setData({
-      selectId:e.currentTarget.dataset.a
+      selectId:e.currentTarget.dataset.a,
+      pageIndex:0
     })
-    
+    wx.pageScrollTo({
+      scrollTop: 0,
+    })
     this.getWetChatArticles()
   },
   itemClick:function(e){
@@ -39,10 +44,23 @@ Page({
   },
   getWetChatArticles: function(e) {
     var page = this
-    WaApi.getWetChatArticles(this.data.selectId, 1).then(function(result){
-      page.setData({
-        artcies:result.datas
-      })
+    WaApi.getWetChatArticles(this.data.selectId, this.data.pageIndex).then(function(result){
+      if(page.data.pageIndex == 0){
+        page.setData({
+          artcies: result.datas
+        })
+      }else{
+        if (result.datas.length==0){
+            page.setData({
+              loadComplete:true
+            })
+        }
+        var newList = page.data.artcies
+        page.setData({
+          artcies: newList.concat(result.datas)
+        })
+      }
+     
     }).catch(function(error){
 
     })
@@ -102,7 +120,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-
+    console.log("上拉触底")
+    var pages = this.data.pageIndex
+    pages = pages + 1
+    this.setData({
+      pageIndex: pages
+    })
+    this.getWetChatArticles()
   },
 
   /**

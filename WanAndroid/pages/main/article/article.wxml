@@ -1,14 +1,13 @@
 <!--pages/main/article/article.wxml-->
 <view class="article_container">
 
-<view>
-<view class="article_search">
-    <image src="../../../images/ic_search.png" class="search_icon"></image>
-    <input class="search_input" placeholder="搜索文章" />
-    <image class="search_clear" src="../../../images/ic_search_clear.png" bindtap="clearClick" />
+  <view>
+    <view class="article_search">
+      <image src="../../../images/ic_search.png" class="search_icon"></image>
+      <input class="search_input" placeholder="搜索文章" bindinput="searchInput" confirm-type="search" bindconfirm="searchArticle" value="{{queryText}}" />
+      <image class="search_clear" style="{{needShowClear?'display:block':'display:none'}}" src="../../../images/ic_search_clear.png" bindtap="clearClick" />
+    </view>
   </view>
-</view>
-  
 
   <scroll-view class="scroll_view">
     <swiper indicator-dots="true" autoplay="true" interval="5000" class="artilce_swiper">
@@ -49,6 +48,14 @@
       </view>
 
     </block>
+  <view class="load_next">
+    <block wx:if="{{loadComplete}}">
+      <text class="load_text">已经加载全部数据</text>
+    </block>
+    <block wx:else>
+      <text class="load_text">正在加载...</text>
+    </block>
+  </view>
 
   </scroll-view>
 </view>

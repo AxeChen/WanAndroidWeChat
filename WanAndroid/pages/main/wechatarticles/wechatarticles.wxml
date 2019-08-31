@@ -1,6 +1,6 @@
 <!--pages/main/wechatarticles/wechatarticles.wxml-->
 <view>
- <scroll-view>
+  <scroll-view>
     <view class="article_list">
       <!-- 文章展示部分 -->
       <block wx:for="{{articles}}" wx:key="articleItem">
@@ -33,6 +33,15 @@
         </view>
 
       </block>
+      <view class="load_next">
+        <block wx:if="{{loadComplete}}">
+          <text class="load_text">已经加载全部数据</text>
+        </block>
+        <block wx:else>
+          <text class="load_text">正在加载...</text>
+        </block>
+      </view>
+
     </view>
   </scroll-view>
 

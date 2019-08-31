@@ -1,7 +1,7 @@
 <!--pages/main/mine/mine.wxml-->
 <view class="mine_container">
 
-  <view class="mine_header">
+  <view class="mine_header" bindtap="userClick">
     <image class="mine_avatar" src="../../../images/ic_default_avatar.png"></image>
     <text class="mine_name">未登录</text>
   </view>

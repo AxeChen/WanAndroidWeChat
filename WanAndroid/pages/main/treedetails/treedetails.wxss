@@ -114,3 +114,13 @@
   background:white;
   z-index: 1;
 }
+
+.load_next{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.load_text{
+  align-self: center;
+}

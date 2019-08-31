@@ -1,4 +1,4 @@
-/* pages/main/wechatarticles/wechatarticles.wxss */
+/* pages/main/article/search/search.wxss */
 .article_lists {
   padding: 20rpx 20rpx 20rpx 20rpx;
   flex-direction: column;
@@ -101,7 +101,24 @@
   color: green;
 }
 
+.article_search {
+  display: flex;
+  padding-left: 20rpx;
+  padding-right: 40rpx;
+  flex-direction: row;
+  align-items: center;
+  height: 90rpx;
+  position: fixed;
+  width: 100%;
+  background: white;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
 
+.scroll_view {
+  margin-top: 90rpx;
+}
 .load_next{
   height: 100rpx;
   display: flex;

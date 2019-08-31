@@ -7,6 +7,11 @@ Page({
   data: {
 
   },
+  userClick:function(e){
+    wx.navigateTo({
+      url: '../../../pages/login/login',
+    })
+  },
   clickDown:function(e){
     wx.navigateTo({
       url: '../../../pages/web/webview?link=https://www.coolapk.com/apk/com.mg.axechen.wanandroid&title=酷安下载'

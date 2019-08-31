@@ -9,7 +9,7 @@
   <view class="login_login_container" bindtap="userLogin">
     <text class="login_login_text" >登录</text>
   </view>
-  <text class="login_login_register">还没有账号？点我注册</text>
+  <text class="login_login_register" bindtap="goRegister">还没有账号？点我注册</text>
 
 
 </view>

@@ -1,21 +1,35 @@
 <view class="main" bindscrolltoupper="getTest" style="height: auto;" scroll-y="{{true}}">
   <view class="newsList" wx:for="{{newlist}}" wx:key="{{item.id}}" hover-class="none" hover-stop-propagation="false">
     <view class="box">
-      <image src="{{item.envelopePic}}" lazy-load="true" mode="center" class="titleimg"></image>
+      <image src="{{item.envelopePic}}" lazy-load="true" mode="aspectFill" class="titleimg"></image>
       <view class="liner">
         <view class="pos">
           <view class="icon">
             <view class="icon_img">
               <image class="icon_img_img" src="../../../images/22.png" mode="center|widthFix" lazy-load="false" binderror="" bindload="" />
             </view>
-            <text class="icon_text">{{item.chapterName}}</text>
+            <text class="icon_text">{{item.author}}</text>
           </view>
           <view class="like"></view>
         </view>
       </view>
     </view>
     <view class="title">
-      <text decode="{{true}}">{{item.title}}</text>
+      <text decode="{{true}}" class="article_title">{{item.title}}</text>
     </view>
+    <view class="article_bottom">
+      <view class="article_tags_container">
+        <text class="article_tags">分类：{{item.chapterName}}/{{item.superChapterName}}</text>
+      </view>
+      <text class="article_time">时间：{{item.niceDate}}</text>
+    </view>
+  </view>
+    <view class="load_next">
+    <block wx:if="{{loadComplete}}">
+      <text class="load_text">已经加载全部数据</text>
+    </block>
+    <block wx:else>
+      <text class="load_text">正在加载...</text>
+    </block>
   </view>
 </view>
