@@ -1,5 +1,4 @@
 // pages/login/login.js
-
 var loginApi = require("../../common/network/request.js")
 
 Page({
@@ -10,6 +9,11 @@ Page({
   data: {
     username: "",
     userpwd: ""
+  },
+  goRegister:function(e){
+    wx.navigateTo({
+      url: '../../pages/register/register',
+    })
   },
   getUserName: function(e) {
     this.setData({

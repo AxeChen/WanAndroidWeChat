@@ -1,20 +1,21 @@
 {
   "pages": [
-    "pages/main/mine/developer/developer",
+    "pages/main/article/article",
+    "pages/main/project/project",
     "pages/main/mine/mine",
+    "pages/main/mine/developer/developer",
     "pages/main/tree/tree",
     "pages/main/wechat/wechat",
-    "pages/main/article/article",
     "pages/web/webview",
     "pages/main/main",
     "pages/login/login",
     "pages/register/register",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/main/project/project",
     "pages/main/allwechat/allwechat",
     "pages/main/wechatarticles/wechatarticles",
-    "pages/main/treedetails/treedetails"
+    "pages/main/treedetails/treedetails",
+    "pages/main/article/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",

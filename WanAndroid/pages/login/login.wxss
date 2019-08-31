@@ -8,6 +8,7 @@
 .login_title{
   margin-left: 30rpx;
   font-size: 80rpx;
+  margin-top: 100rpx;
   color: #00BFFF;
 }
 

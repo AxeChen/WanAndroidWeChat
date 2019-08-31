@@ -7,7 +7,53 @@ Page({
   data: {
 
   },
-
+  userClick:function(e){
+    wx.navigateTo({
+      url: '../../../pages/login/login',
+    })
+  },
+  clickDown:function(e){
+    wx.navigateTo({
+      url: '../../../pages/web/webview?link=https://www.coolapk.com/apk/com.mg.axechen.wanandroid&title=酷安下载'
+    })
+  },
+  longClickDown:function(e){
+    console.log(e)
+    wx.setClipboardData({
+      data: 'https://www.coolapk.com/apk/com.mg.axechen.wanandroid',
+      success:function(res){
+        wx.showToast({
+          title: '复制成功'
+        })
+      }
+    })
+  },
+  clickSourse:function(e){
+    wx.navigateTo({
+      url: '../../../pages/web/webview?link=https://github.com/AxeChen/WanAndroidWeChat&title=源码地址'
+    })
+  },
+  clickLongSourse:function(e){
+    console.log(e)
+    wx.setClipboardData({
+      data: 'https://github.com/AxeChen/WanAndroidWeChat',
+      success: function (res) {
+        wx.showToast({
+          title: '复制成功'
+        })
+      }
+    })
+  },
+  clickDevelopes:function(e){
+    wx.navigateTo({
+      url: '../../../pages/main/mine/developer/developer',
+    })
+  },
+  wanAnLink:function(e){
+    wx.navigateTo({
+      url: '../../../pages/web/webview?link=https://www.wanandroid.com/blog/show/2&title=玩AndroidApi'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

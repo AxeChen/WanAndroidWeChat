@@ -6,7 +6,8 @@ Page({
   data: {
     test: "ok",
     newlist: [],
-    num: 0
+    num: 0,
+    loadComplete:false
   },
 
   /**
@@ -72,6 +73,11 @@ Page({
       success: (data => {
         var newarr = data.data.data.datas
         var list = that.data.newlist
+        if(newarr.length==0){
+            that.setData({
+              loadComplete:true
+            })
+        }
         that.setData({
           newlist: list.concat(newarr),
           num: numonfun

@@ -1,48 +1,49 @@
-// pages/main/treedetails/treedetails.js
-var WaApi = require("../../../common/network/request.js")
+// pages/main/article/search/search.js
+var WaApi = require("../../../../common/network/request.js")
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    cid: 0,
+    artcies: [],
+    querText: "",
     pageIndex: 0,
-    articles:[],
-    loadComplete: false
+    loadComplete:false
   },
-
-  getTreeArticle: function(e) {
+  queryArticle: function(e) {
     var page = this
-    WaApi.getTreeArticles(this.data.pageIndex, this.data.cid).then(function(result) {
-      if (page.data.pageIndex==0){
+    WaApi.articleQuery(this.data.pageIndex, this.data.querText).then(function(result) {
+      if (page.data.pageIndex == 0){
         page.setData({
-          articles: result.datas
+          artcies: result.datas
         })
+        wx.stopPullDownRefresh()
       }else{
-        var list = page.data.articles
+        if (result.datas.length == 0){
+            page.setData({
+              loadComplete:true
+            })
+        }
+        // 加载下一页
+        var list = page.data.artcies
         page.setData({
-          articles: list.concat(result.datas)
+          artcies: list.concat(result.datas)
         })
       }
-     
+    
     }).catch(function(error) {
 
     })
   },
-  itemClick:function(e){
-    wx.navigateTo({
-      url: '../../../pages/web/webview?link=' + e.currentTarget.dataset.s + "&title=" + e.currentTarget.dataset.a
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
     this.setData({
-      cid: options.cid
+      querText: options.querText
     })
-    this.getTreeArticle()
+    this.queryArticle()
   },
 
   /**
@@ -77,7 +78,13 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-
+    console.log("下拉触顶")
+    var pages = this.data.pageIndex
+    pages = 0
+    this.setData({
+      pageIndex: pages
+    })
+    this.queryArticle()
   },
 
   /**
@@ -90,7 +97,7 @@ Page({
     this.setData({
       pageIndex: pages
     })
-    this.getTreeArticle()
+    this.queryArticle()
   },
 
   /**

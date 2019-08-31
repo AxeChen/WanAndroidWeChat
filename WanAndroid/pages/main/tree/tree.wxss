@@ -7,7 +7,7 @@
 }
 
 .tree_head {
-  height: 80rpx;
+  height: 90rpx;
   align-items: center;
   width: 100%;
   display: flex;
@@ -15,7 +15,7 @@
 }
 
 .tree_item {
-  border-bottom: 2rpx solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .tree_kinds {

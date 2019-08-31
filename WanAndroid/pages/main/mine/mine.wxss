@@ -51,3 +51,7 @@
   height: 50rpx;
   align-items: center;
 }
+
+.copy_tips{
+  font-size: 20rpx;
+}

@@ -19,16 +19,12 @@
   height: 40rpx;
 }
 
-.search_input {
-  font-size: 28rpx;
-  margin-left: 20rpx;
-  width: 100%;
-}
+
 
 .search_clear {
   height: 40rpx;
   margin-right: 40rpx;
-  width: 42rpx;
+  width: 45rpx;
   align-self: right;
 }
 
@@ -149,6 +145,23 @@
   left: 0;
 }
 
+.search_input {
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  width: 100%;
+}
+
 .scroll_view {
   margin-top: 90rpx;
+}
+
+.load_next{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.load_text{
+  align-self: center;
 }

@@ -1,7 +1,7 @@
 <!--pages/main/mine/mine.wxml-->
 <view class="mine_container">
 
-  <view class="mine_header">
+  <view class="mine_header" bindtap="userClick">
     <image class="mine_avatar" src="../../../images/ic_default_avatar.png"></image>
     <text class="mine_name">未登录</text>
   </view>
@@ -13,22 +13,25 @@
   <view class="mine_item">
     <image class="mine_collect_img" src="../../../images/ic_blog.png"></image>
     <text class="mine_item_name">博客地址</text>
+    <text class="copy_tips">(长按复制地址)</text>
   </view>
 
-  <view class="mine_item">
+  <view class="mine_item" bindtap="clickDevelopes">
     <image class="mine_collect_img" src="../../../images/ic_member.png"></image>
     <text class="mine_item_name">开发人员介绍</text>
   </view>
-  <view class="mine_item">
+  <view class="mine_item" bindtap="clickSourse" bindlongtap="clickLongSourse">
     <image class="mine_collect_img" src="../../../images/ic_github.png"></image>
     <text class="mine_item_name">源码地址</text>
+    <text class="copy_tips">(长按复制地址)</text>
   </view>
-  <view class="mine_item">
+  <view class="mine_item" bindtap="wanAnLink">
     <image class="mine_collect_img" src="../../../images/ic_android.png"></image>
-    <text class="mine_item_name">WanAndroid项目介绍</text>
+    <text class="mine_item_name">WanAndroid项目API地址</text>
   </view>
-  <view class="mine_item">
-    <image class="mine_collect_img" src="../../../images/ic_download.png"></image>
+  <view class="mine_item"bindtap="clickDown" bindlongtap="longClickDown">
+    <image class="mine_collect_img" src="../../../images/ic_download.png" ></image>
     <text class="mine_item_name">Kotlin版本下载地址</text>
+    <text class="copy_tips">(长按复制地址)</text>
   </view>
 </view>

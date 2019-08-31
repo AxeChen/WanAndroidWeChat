@@ -70,9 +70,18 @@ function post(url, data) {
       url: url,
       method: 'POST',
       data: data,
+      header: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            },
       success: function(res) {
-        if (res.errorCode == 0) {
-          resolve(res.data)
+        if (res.statusCode == 200) {
+          if (res.data.errorCode == 0) {
+            console.log(res.data.data)
+            resolve(res.data.data)
+
+          } else {
+            reject("error")
+          }
         } else {
           reject("error")
         }
@@ -162,6 +171,22 @@ function getTreeArticles(pageIndex, cid) {
   })
 }
 
+/**
+ * 搜索文章
+ */
+function articleQuery(pageIndex, query) {
+  return new Promise((resolve, reject) => {
+    post(HOST + "/article/query/" + pageIndex + "/json", {
+      "k": query
+    }).then(function(result) {
+      resolve(result)
+    }).catch(function(error) {
+      reject(error)
+    })
+  })
+}
+
+
 module.exports.userLogin = userLogin;
 module.exports.getBanner = getBanner;
 module.exports.getArtciles = getArtciles;
@@ -169,3 +194,4 @@ module.exports.getWeChatItems = getWeChatItems;
 module.exports.getWetChatArticles = getWetChatArticles;
 module.exports.getArticlesTree = getArticlesTree;
 module.exports.getTreeArticles = getTreeArticles;
+module.exports.articleQuery = articleQuery;

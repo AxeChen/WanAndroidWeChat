@@ -174,3 +174,13 @@
 .article_list {
   margin-top: 100rpx;
 }
+
+.load_next{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.load_text{
+  align-self: center;
+}
